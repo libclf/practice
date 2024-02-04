@@ -1,0 +1,176 @@
+:root {
+    --main-color: #77A88D;
+    --main-color-hover: #77A88D;
+}
+
+body {
+    font-size: 15px;
+    color: #333333;
+}
+
+/* change bootstrap nav color start */
+.nav-tabs {
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-emphasis-color: #333333
+}
+
+ul.nav li a,
+ul.nav li a:visited {
+    color: #77A88D;
+}
+
+ul.nav li a:hover,
+ul.nav li a:active {
+    color: #77A88D;
+    background-color: #FAFAFA;
+}
+
+ul.nav li.active a {
+    color: #77A88D;
+}
+
+/* change bootstrap nav color end */
+
+h2 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.wrap {
+    width: 75%;
+    min-width: 768px;
+    margin: auto;
+}
+
+/* Order */
+.orders-list-title {
+    display: flex;
+    font-weight: 500;
+    border-bottom: 2px solid;
+    padding: 12px 0;
+}
+
+.orders-id-header {
+    min-width: 265px;
+
+}
+
+.events-title-header {
+    width: 100%;
+    margin-left: 5%;
+}
+
+/* Order Detail*/
+.order-id-with-pic {
+    width: 265px;
+}
+
+.order-detail {
+    display: flex;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+.order-id {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.event-pic img {
+    min-width: 100%;
+    vertical-align: center;
+    padding: 5px;
+    border: 1px solid #E5E5E5;
+}
+
+.order-event-detail {
+    width: 100%;
+    margin-left: 5%;
+    box-sizing: border-box;
+}
+
+.event-title {
+    width: 90%;
+    margin: 20px 0;
+}
+
+.event-title a {
+    color: #77A88D;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.event-title a:hover {
+    color: #598987;
+    text-decoration: underline;
+}
+
+tr {
+    line-height: 1.5em;
+}
+
+th {
+    width: 30%;
+    color: #999999;
+}
+
+td {
+    display: block;
+    width: 70%;
+    box-sizing: content-box;
+
+}
+
+.order-btns {
+    width: 180px;
+    margin: auto;
+}
+
+.order-btns a {
+    color: #333333;
+    display: block;
+    height: 2.5em;
+    width: 180px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: -1px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.order-btns a:hover {
+    background-color: #E5E5E5;
+}
+
+.order-btns .btn-edit-order {
+    border-radius: 4px;
+    margin-right: auto;
+}
+
+.order-btns .btn-edit-order a::before {
+    content: url(/img/pencil-alt-solid.svg);
+    padding-right: 10px;
+}
+
+.order-btns .btn-contact-organizer a::before {
+    content: url(/img/envelope-solid.svg);
+    padding-right: 10px;
+}
+
+.order-btns .btn-contact-customer-service a::before {
+    content: url(/img/paper-plane-solid.svg);
+    padding-right: 10px;
+}
+
+.order-btns .btn-cancel-order a::before {
+    content: url(/img/circle-xmark-solid.svg);
+    padding-right: 10px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
