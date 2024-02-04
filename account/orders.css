@@ -89,6 +89,7 @@ h2 {
 .order-event-detail {
     width: 100%;
     margin-left: 5%;
+    margin-right: 5%;
     box-sizing: border-box;
 }
 
@@ -114,15 +115,13 @@ tr {
 }
 
 th {
-    width: 30%;
+    width: 95px;
     color: #999999;
 }
 
 td {
     display: block;
-    width: 70%;
-    box-sizing: content-box;
-
+    width: 100%;
 }
 
 .order-btns {
