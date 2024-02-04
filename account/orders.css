@@ -152,22 +152,22 @@ td {
 }
 
 .order-btns .btn-edit-order a::before {
-    content: url(/img/pencil-alt-solid.svg);
+    content: url(./img/pencil-alt-solid.svg);
     padding-right: 10px;
 }
 
 .order-btns .btn-contact-organizer a::before {
-    content: url(/img/envelope-solid.svg);
+    content: url(./img/envelope-solid.svg);
     padding-right: 10px;
 }
 
 .order-btns .btn-contact-customer-service a::before {
-    content: url(/img/paper-plane-solid.svg);
+    content: url(./img/paper-plane-solid.svg);
     padding-right: 10px;
 }
 
 .order-btns .btn-cancel-order a::before {
-    content: url(/img/circle-xmark-solid.svg);
+    content: url(./img/circle-xmark-solid.svg);
     padding-right: 10px;
 }
 
