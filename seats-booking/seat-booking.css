@@ -15,6 +15,12 @@ a {
     text-decoration: none;
 }
 
+h6 {
+    color: var(--main-color)
+}
+
+
+
 .width {
     width: 75%;
     min-width: 768px;
@@ -353,4 +359,20 @@ a:hover {
 .seat:hover {
     background: url(./imgs/9025208_armchair_icon.svg);
     background-color: #77A88D;
+}
+
+.modal-body ol {
+    list-style: disc;
+}
+
+.modal-body ol>img {
+    vertical-align: top;
+    width: 90%;
+    margin: auto;
+}
+
+
+.modal-footer button {
+    --bs-btn-bg: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
 }

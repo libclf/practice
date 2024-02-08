@@ -41,7 +41,7 @@
                 <a href="#">取消購票</a>
             </div>
             <div class="btn-user-guide">
-                <a href="http://">操作說明</a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">操作說明</a>
             </div>
         </div>
         <div class="count-down-timer ">
@@ -255,7 +255,50 @@
         </div>
     </div>
 
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button> -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">座位圖使用說明</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>基本操作</h6>
+                    <p>座位圖操作方式如下：</p>
+                    <ol>
+                        <img src="./imgs/seat_operation_1.jpg" alt="">
+                        <li>座位圖的左上角有 及 圖示，點選 圖示可放大座位圖；點選 圖示可縮小座位圖。
+                        </li>
+                        <img src="./imgs/seat_operation_2.jpg" alt="">
+                        <li>位圖中沒有座位的空白區域，可看見滑鼠指標變更為十字形，此時可拉動座位圖調整顯示範圍。</li>
+                    </ol>
+                    <h6>換位說明</h6>
+                    <p>若想變更已選定的座位，可依下列步驟進行換位：</p>
+                    <p>請注意：僅支援相同票種及金額座位的操作。</p>
+                    <ol>
+                        <img src="./imgs/change_seat_1_zh-TW.jpg" alt="">
+                        <li>點選目前已選但想更換的座位，將會看見「您正在更改座位」的提示訊息。
+                        </li>
+                        <img src="./imgs/change_seat_2_zh-TW.jpg" alt="">
+                        <li>將滑鼠移至想更換的目標座位上，可從提示訊息中看見該位置的排號。
+                        </li>
+                        <img src="./imgs/change_seat_3_zh-TW.jpg" alt="">
+                        <li>若確認無誤，點選該座位即完成換位。
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">知道了</button>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
