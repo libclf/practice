@@ -1,0 +1,350 @@
+:root {
+    --main-color: #77A88D;
+    --main-color-hover: #77A88D;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: var(--main-font-size);
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+}
+
+.width {
+    width: 75%;
+    min-width: 768px;
+    margin: 0px auto;
+}
+
+.wrap {
+    width: 75%;
+    min-width: 768px;
+    margin: 50px auto;
+}
+
+/* start ----- header-nav ----- */
+#header-nav {
+    background-color: var(--main-color);
+}
+
+#header-nav a {
+    color: #fff;
+    padding: 13px 20px;
+}
+
+#header-nav #header-nav-logo {
+    padding: 0px 20px;
+}
+
+#header-nav #header-nav-logo:hover {
+    background-color: transparent;
+}
+
+#header-nav img {
+    height: 20px;
+}
+
+/* user account */
+a:hover {
+    --bs-link-color-rgb: none;
+    background-color: #598987;
+}
+
+#header-nav li a {
+    padding: 0.6em;
+}
+
+#header-nav-right .dropdown-item {
+    width: 300px;
+    color: #333333;
+}
+
+.dropdown-item a:hover {
+    background-color: #ddd;
+}
+
+#header-nav-right img {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+
+}
+
+#user-name {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#nav-user-setting::before {
+    content: url(./imgs/cog-solid.svg);
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+#nav-user-orders::before {
+    content: url(./imgs/ticket-alt-solid.svg);
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+#nav-logout::before {
+    content: url(./imgs/sign-out-alt-solid.svg);
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+/* end ----- header-nav ----- */
+
+/* action bar*/
+.action-bar {
+    background-color: #EEE;
+    padding: 0.5em 0;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/* cancel & user guide button */
+.action-bar-left a {
+    display: block;
+    color: #333333;
+    height: 2.5em;
+    width: 100px;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.action-bar-left .btn-cancel a {
+    margin: 0 10px;
+}
+
+.action-bar-left .btn-user-guide a {
+    margin-right: 10px;
+}
+
+.action-bar-left .btn-cancel a::before {
+    content: url(./imgs/circle-xmark-solid.svg);
+    padding-right: 10px;
+}
+
+.action-bar-left .btn-cancel a:hover {
+    background-color: #ddd;
+}
+
+.action-bar-left .btn-user-guide a::before {
+    content: url(./imgs/book-open-solid.svg);
+    padding-right: 10px;
+}
+
+.action-bar-left .btn-user-guide a:hover {
+    background-color: #ddd;
+}
+
+/* timer */
+.count-down-timer {
+    background-color: #DB4455;
+    color: #fff;
+    height: 2.5em;
+    line-height: 2.5em;
+    width: 50%;
+    border-radius: 4px;
+    margin: auto;
+    text-align: center;
+
+}
+
+/* confirm button */
+.btn-confirm a {
+    display: block;
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    color: #fff;
+    height: 2.5em;
+    width: 220px;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.btn-confirm a:hover {
+    background-color: #598987;
+}
+
+.btn-confirm a::after {
+    position: relative;
+    top: -2px;
+    left: 5px;
+    display: inline-block;
+    color: var(--main-color);
+    font-weight: bold;
+    content: counter(name);
+    border: 1px #fff solid;
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 20%;
+}
+
+/* stage and showcase */
+.stage-and-showcase {
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.stage {
+    display: block;
+    height: 2em;
+    line-height: 2em;
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #333333;
+    border-radius: 5rem;
+}
+
+.showcase {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    margin-left: auto;
+}
+
+.seat-selected {
+    margin-right: 10px;
+}
+
+.seat-selected::before {
+    content: "●";
+    color: #77A88D;
+    margin-right: 1px;
+}
+
+.seat-available {
+    margin-right: 10px;
+}
+
+.seat-available::before {
+    content: "●";
+    color: #FFFFFF;
+    margin-right: 1px;
+}
+
+.seat-occupied {
+    margin-right: 10px;
+}
+
+.seat-occupied::before {
+    content: "●";
+    color: #AAAAAA;
+    margin-right: 1px;
+}
+
+/* display sear area & current area */
+.select-seats {
+    background-color: #888888;
+    position: relative;
+    height: 600px;
+}
+
+.display-seat-area {
+    display: inline-block;
+    max-width: 250px;
+    height: 4em;
+    line-height: 4em;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.display-seat-area-chart a {
+    color: #333333;
+    font-weight: bold;
+    height: 2.5em;
+    width: 120px;
+    background-color: #FFFFFF;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    text-align: center;
+    margin: 0px 10px auto 0px;
+}
+
+.display-seat-area-chart a:hover {
+    background-color: #EEE;
+}
+
+.display-seat-area-chart a::before {
+    content: url(./imgs/compass-regular.svg);
+    padding-right: 10px;
+}
+
+.current-area span {
+    display: inline-block;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-radius: 4px;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    margin: auto;
+}
+
+/* zoom in & zoom out */
+.zoom-in-zoom-out {
+    padding: 0 0 10px 10px;
+}
+
+.zoom-in-zoom-out img {
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: #fff;
+    width: 20px;
+    border: 1px solid #333333;
+    margin-top: -1px;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0px;
+    opacity: 0.9;
+}
+
+.zoom-in-zoom-out img:hover {
+    opacity: 1;
+}
+
+.seats-group {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* display seats */
+.row {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.seat {
+    display: inline-block;
+    background: url(./imgs/9025208_armchair_icon.svg);
+    background-color: #888888;
+    height: 30px;
+    width: 30px;
+}
+
+.seat:hover {
+    background: url(./imgs/9025208_armchair_icon.svg);
+    background-color: #77A88D;
+}
