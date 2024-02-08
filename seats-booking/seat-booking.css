@@ -111,14 +111,16 @@ a:hover {
 
 /* cancel & user guide button */
 .action-bar-left a {
-    display: block;
+    display: inline-block;
     color: #333333;
     height: 2.5em;
+    line-height: 1em;
     width: 100px;
     border: var(--common-border);
     border-radius: 4px;
     padding: 10px 5px;
     text-align: center;
+    vertical-align: text-top;
 }
 
 .action-bar-left .btn-cancel a {
@@ -162,17 +164,19 @@ a:hover {
 
 /* confirm button */
 .btn-confirm a {
-    display: block;
+    display: inline-block;
     box-sizing: border-box;
     background-color: var(--main-color);
     color: #fff;
     height: 2.5em;
+    line-height: 1em;
     width: 220px;
     border: var(--common-border);
     border-radius: 4px;
     padding: 10px 10px;
     margin: 0 10px;
     text-align: center;
+    vertical-align: middle;
 }
 
 .btn-confirm a:hover {
@@ -211,6 +215,8 @@ a:hover {
     color: #FFFFFF;
     background-color: #333333;
     border-radius: 5rem;
+    position: relative;
+    right: 5px;
 }
 
 .showcase {
