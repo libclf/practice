@@ -19,18 +19,10 @@ h6 {
     color: var(--main-color)
 }
 
-
-
 .width {
     width: 75%;
     min-width: 768px;
     margin: 0px auto;
-}
-
-.wrap {
-    width: 75%;
-    min-width: 768px;
-    margin: 50px auto;
 }
 
 /* start ----- header-nav ----- */
@@ -139,6 +131,9 @@ a:hover {
 
 .action-bar-left .btn-cancel a::before {
     content: url(./imgs/circle-xmark-solid.svg);
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
     padding-right: 10px;
 }
 
@@ -148,6 +143,9 @@ a:hover {
 
 .action-bar-left .btn-user-guide a::before {
     content: url(./imgs/book-open-solid.svg);
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
     padding-right: 10px;
 }
 
@@ -191,7 +189,7 @@ a:hover {
 
 .btn-confirm a::after {
     position: relative;
-    top: -2px;
+    top: -1px;
     left: 5px;
     display: inline-block;
     color: var(--main-color);
@@ -199,9 +197,10 @@ a:hover {
     content: counter(name);
     border: 1px #fff solid;
     background-color: #fff;
-    height: 20px;
-    width: 20px;
-    border-radius: 20%;
+    height: 18px;
+    vertical-align: -webkit-baseline-top;
+    width: 18px;
+    border-radius: 4px;
 }
 
 /* stage and showcase */
@@ -240,6 +239,9 @@ a:hover {
     content: "●";
     color: #77A88D;
     margin-right: 1px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .seat-available {
@@ -250,6 +252,9 @@ a:hover {
     content: "●";
     color: #FFFFFF;
     margin-right: 1px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .seat-occupied {
@@ -260,6 +265,9 @@ a:hover {
     content: "●";
     color: #AAAAAA;
     margin-right: 1px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 /* display sear area & current area */
@@ -290,15 +298,20 @@ a:hover {
     padding: 10px 10px;
     text-align: center;
     margin: 0px 10px auto 0px;
+    opacity: 0.9;
 }
 
 .display-seat-area-chart a:hover {
-    background-color: #EEE;
+    opacity: 1;
 }
 
 .display-seat-area-chart a::before {
     content: url(./imgs/compass-regular.svg);
-    padding-right: 10px;
+    color: #77A88D;
+    padding-right: 5px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .current-area span {
@@ -320,7 +333,7 @@ a:hover {
 .zoom-in-zoom-out img {
     display: inline-block;
     box-sizing: content-box;
-    background-color: #fff;
+    background-color: #FFFFFF;
     width: 20px;
     border: 1px solid #333333;
     margin-top: -1px;
@@ -370,7 +383,6 @@ a:hover {
     width: 90%;
     margin: auto;
 }
-
 
 .modal-footer button {
     --bs-btn-bg: var(--main-color);
