@@ -52,29 +52,31 @@
             <a href="#">確認座位</a>
         </div>
     </div>
-    <div class="stage-and-showcase width d-grid">
-        <div class="empity"></div>
-        <div class="stage"><span>舞台方向</span></div>
-        <div class="showcase d-flex justify-content-center">
-            <div class="seat-selected">已選</div>
-            <div class="seat-available">可選</div>
-            <div class="seat-occupied">不可選</div>
+    <div class="seat-areas-and-showcases width d-flex">
+        <div class="display-seat-area d-flex">
+            <div class="display-seat-area-chart">
+                <a href="#">票區圖</a>
+            </div>
+            <div class="current-area">
+                <p>2 樓 2A 區</p>
+            </div>
+        </div>
+        <div class="showcases d-flex justify-content-end">
+            <div class="showcase-selected">已選</div>
+            <div class="showcase-available">可選</div>
+            <div class="showcase-occupied">不可選</div>
         </div>
     </div>
 
     <div class="select-seats width">
-        <div class="seat-area-btns">
-            <div class="display-seat-area d-flex">
-                <div class="display-seat-area-chart">
-                    <a href="#">票區圖</a>
-                </div>
-                <div class="current-area"><span>2 樓 2A 區</span></div>
-            </div>
-            <div class="zoom-in-zoom-out d-flex flex-column">
-                <img src="./imgs/search-plus-solid.svg" alt="zoom in">
-                <img src="./imgs/search-minus-solid.svg" alt="zoom out">
-            </div>
+        <div class="stage">
+            <span>舞台方向</span>
         </div>
+        <div class="zoom-in-zoom-out d-flex flex-column">
+            <img src="./imgs/search-plus-solid.svg" alt="zoom in">
+            <img src="./imgs/search-minus-solid.svg" alt="zoom out">
+        </div>
+
         <div class="seats-group">
             <div class="row">
                 <div class="seat" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
@@ -97,10 +99,10 @@
                 <div class="seat"></div>
             </div>
             <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+                <div class="seat occupied-seat"></div>
+                <div class="seat occupied-seat"></div>
+                <div class="seat selected-seat"></div>
+                <div class="seat selected-seat"></div>
                 <div class="seat"></div>
                 <div class="seat"></div>
                 <div class="seat"></div>
@@ -255,6 +257,8 @@
             </div>
         </div>
     </div>
+    <div class="fixed-btns"></div>
+
 
 
 

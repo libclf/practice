@@ -1,8 +1,10 @@
 :root {
-    --main-color: #77A88D;
-    --main-color-hover: #77A88D;
+    --main-color: #3b7555;
+    --main-color-hover: #3b7555;
+    --function-color-hover: #518f6d;
     --main-font-size: 15px;
     --common-border: 1px #ddd solid;
+    --dark-gray-border: 1px solid #999EA2;
 }
 
 body {
@@ -21,7 +23,8 @@ h6 {
 
 .width {
     width: 75%;
-    min-width: 768px;
+    min-width: auto;
+    max-width: 1200px;
     margin: 0px auto;
 }
 
@@ -50,7 +53,7 @@ h6 {
 /* user account */
 a:hover {
     --bs-link-color-rgb: none;
-    background-color: #598987;
+    background-color: var(--function-color-hover);
 }
 
 #header-nav li a {
@@ -160,6 +163,7 @@ a:hover {
     height: 2.5em;
     line-height: 2.5em;
     width: 50%;
+    min-width: 200px;
     border-radius: 4px;
     margin: auto;
     text-align: center;
@@ -169,7 +173,7 @@ a:hover {
 /* confirm button */
 .btn-confirm a {
     display: inline-block;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     background-color: var(--main-color);
     color: #fff;
     height: 2.5em;
@@ -184,7 +188,7 @@ a:hover {
 }
 
 .btn-confirm a:hover {
-    background-color: #598987;
+    background-color: var(--function-color-hover);
 }
 
 .btn-confirm a::after {
@@ -203,52 +207,89 @@ a:hover {
     border-radius: 4px;
 }
 
-/* stage and showcase */
-.stage-and-showcase {
+/* seat areas btns and showcase */
+.seat-areas-and-showcases {
     background-color: #ddd;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
 }
 
-.stage {
-    display: block;
-    height: 2em;
-    line-height: 2em;
-    width: 85%;
-    margin: auto;
-    text-align: center;
-    color: #FFFFFF;
-    background-color: #333333;
-    border-radius: 5rem;
-    position: relative;
-    right: 5px;
-}
-
-.showcase {
+/* display seat area & current area */
+.display-seat-area {
     display: inline-block;
-    height: 2em;
-    line-height: 2em;
+    max-width: 70%;
+    height: 3em;
+    line-height: 3em;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.display-seat-area a {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: #fff;
+    height: 2.5em;
+    line-height: 1em;
+    width: 100px;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.display-seat-area-chart a:hover {
+    background-color: var(--function-color-hover);
+}
+
+.display-seat-area-chart a::before {
+    content: url(./imgs/compass-regular.svg);
+    padding-right: 5px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.current-area {
+    color: var(--function-color-hover);
+    display: inline-block;
+    height: 3em;
+    line-height: 3em;
+}
+
+.current-area p::before {
+    content: url(./imgs/street-view-solid.svg);
+    margin-left: 20px;
+    padding-right: 10px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.showcases {
+    display: inline-block;
+    height: 3em;
+    line-height: 3em;
     margin-left: auto;
 }
 
-.seat-selected {
+.showcase-selected {
     margin-right: 10px;
 }
 
-.seat-selected::before {
+.showcase-selected::before {
     content: "●";
-    color: #77A88D;
+    color: var(--main-color);
     margin-right: 1px;
     display: inline-block;
     height: 100%;
     vertical-align: middle;
 }
 
-.seat-available {
+.showcase-available {
     margin-right: 10px;
 }
 
-.seat-available::before {
+.showcase-available::before {
     content: "●";
     color: #FFFFFF;
     margin-right: 1px;
@@ -257,11 +298,11 @@ a:hover {
     vertical-align: middle;
 }
 
-.seat-occupied {
+.showcase-occupied {
     margin-right: 10px;
 }
 
-.seat-occupied::before {
+.showcase-occupied::before {
     content: "●";
     color: #AAAAAA;
     margin-right: 1px;
@@ -270,64 +311,47 @@ a:hover {
     vertical-align: middle;
 }
 
-/* display sear area & current area */
+/* stage, select seats & zoom functions */
 .select-seats {
-    background-color: #888888;
+    --select-seat-bgc: #888888;
+    background-color: var(--select-seat-bgc);
     position: relative;
     height: 600px;
 }
 
-.display-seat-area {
-    display: inline-block;
-    max-width: 250px;
-    height: 4em;
-    line-height: 4em;
-    color: #fff;
-    border-radius: 4px;
-    margin-left: 10px;
-}
-
-.display-seat-area-chart a {
-    color: #333333;
-    font-weight: bold;
-    height: 2.5em;
-    width: 120px;
-    background-color: #FFFFFF;
-    border: var(--common-border);
-    border-radius: 4px;
-    padding: 10px 10px;
-    text-align: center;
-    margin: 0px 10px auto 0px;
-    opacity: 0.9;
-}
-
-.display-seat-area-chart a:hover {
-    opacity: 1;
-}
-
-.display-seat-area-chart a::before {
-    content: url(./imgs/compass-regular.svg);
-    color: #77A88D;
-    padding-right: 5px;
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.current-area span {
-    display: inline-block;
-    box-sizing: border-box;
-    font-weight: bold;
-    border-radius: 4px;
-    height: 2.5em;
-    line-height: 2.5em;
-    text-align: center;
+/* stage */
+.stage {
+    height: 5em;
+    line-height: 5em;
+    width: 60%;
     margin: auto;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    top: 2px;
+    z-index: 1;
 }
+
+/* trapezoid */
+.stage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #333333;
+    z-index: -1;
+    transform: perspective(0.5em) rotateX(-0.5deg);
+    border-radius: .5rem;
+}
+
 
 /* zoom in & zoom out */
 .zoom-in-zoom-out {
-    padding: 0 0 10px 10px;
+    padding: 0 15px;
+    position: relative;
+    top: -60px;
 }
 
 .zoom-in-zoom-out img {
@@ -348,6 +372,7 @@ a:hover {
 }
 
 .seats-group {
+    background-color: var(--select-seat-bgc);
     margin: auto;
     position: absolute;
     top: 50%;
@@ -357,21 +382,28 @@ a:hover {
 
 /* display seats */
 .row {
+    background-color: var(--select-seat-bgc);
     flex-wrap: nowrap;
     justify-content: flex-end;
 }
 
 .seat {
     display: inline-block;
-    background: url(./imgs/9025208_armchair_icon.svg);
-    background-color: #888888;
+    background: url(./imgs/available_armchair_icon.svg);
     height: 30px;
     width: 30px;
 }
 
 .seat:hover {
-    background: url(./imgs/9025208_armchair_icon.svg);
-    background-color: #77A88D;
+    background: url(./imgs/hover_armchair_icon.svg);
+}
+
+.selected-seat {
+    background: url(./imgs/selected_armchair_icon.svg);
+}
+
+.occupied-seat {
+    background: url(./imgs/occupied_armchair_icon.svg);
 }
 
 .modal-body ol {
@@ -387,4 +419,100 @@ a:hover {
 .modal-footer button {
     --bs-btn-bg: var(--main-color);
     --bs-btn-border-color: var(--main-color);
+}
+
+@media screen and (max-width: 768px) {
+    .width {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .count-down-timer {
+        width: 100%;
+    }
+
+    .action-bar {
+        padding: 0;
+    }
+
+    .action-bar-left {
+        position: fixed;
+        bottom: 4em;
+        z-index: 1;
+    }
+
+    .display-seat-area {
+        margin: auto;
+    }
+
+
+
+    .current-area p {
+        margin-left: auto;
+    }
+
+    .showcases div {
+        visibility: none;
+        display: none;
+    }
+
+    .select-seats {
+        overflow-x: scroll;
+        height: auto;
+        padding-bottom: 5em;
+    }
+
+    .stage {
+        height: 3em;
+        line-height: 3em;
+        min-width: 520px;
+        margin: 0 auto 2em auto;
+    }
+
+    .zoom-in-zoom-out img {
+        display: none;
+    }
+
+    .seats-group {
+        width: 520px;
+        position: relative;
+        transform: none;
+        top: auto;
+        left: -50px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .seat {
+        height: 25px;
+        width: 25px;
+        background-repeat: no-repeat;
+    }
+
+    .row {
+        margin: auto;
+    }
+
+    .btn-user-guide {
+        display: none;
+    }
+
+    .btn-cancel {
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+    }
+
+    .btn-confirm a {
+        width: 100px;
+        position: fixed;
+        bottom: 10px;
+        right: 0;
+        z-index: 1;
+    }
+
+    /* .fixed-btns {
+        background-color: #888888;
+        height: 3em;
+    } */
 }
