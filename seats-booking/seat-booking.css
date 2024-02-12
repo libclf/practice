@@ -178,7 +178,8 @@ a:hover {
     color: #fff;
     height: 2.5em;
     line-height: 1em;
-    width: 220px;
+    max-width: 220px;
+    min-width: 200px;
     border: var(--common-border);
     border-radius: 4px;
     padding: 10px 10px;
@@ -442,6 +443,7 @@ a:hover {
     }
 
     .display-seat-area {
+        justify-content: space-between;
         margin: auto;
     }
 
@@ -478,14 +480,14 @@ a:hover {
         position: relative;
         transform: none;
         top: auto;
-        left: -50px;
+        left: -20px;
         margin: auto;
         justify-content: center;
     }
 
     .seat {
-        height: 25px;
-        width: 25px;
+        height: 30px;
+        width: 30px;
         background-repeat: no-repeat;
     }
 
