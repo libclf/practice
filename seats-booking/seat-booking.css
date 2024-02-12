@@ -178,8 +178,7 @@ a:hover {
     color: #fff;
     height: 2.5em;
     line-height: 1em;
-    max-width: 220px;
-    min-width: 200px;
+    width: 220px;
     border: var(--common-border);
     border-radius: 4px;
     padding: 10px 10px;
@@ -330,6 +329,7 @@ a:hover {
     color: #FFFFFF;
     position: relative;
     top: 2px;
+    left: 1em;
     z-index: 1;
 }
 
@@ -338,9 +338,9 @@ a:hover {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
+    right: 2em;
     bottom: 0;
-    left: 0;
+    left: 1em;
     background-color: #333333;
     z-index: -1;
     transform: perspective(0.5em) rotateX(-0.5deg);
@@ -422,6 +422,12 @@ a:hover {
     --bs-btn-border-color: var(--main-color);
 }
 
+@media screen and (max-width: 888px) {
+    .btn-confirm a {
+        width: 150px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .width {
         width: 100%;
@@ -444,10 +450,8 @@ a:hover {
 
     .display-seat-area {
         justify-content: space-between;
-        margin: auto;
+        margin-left: auto;
     }
-
-
 
     .current-area p {
         margin-left: auto;
@@ -459,16 +463,15 @@ a:hover {
     }
 
     .select-seats {
-        overflow-x: scroll;
-        height: auto;
+        overflow-x: auto;
+        overflow-y: auto;
+        height: 1000px;
         padding-bottom: 5em;
     }
 
     .stage {
-        height: 3em;
-        line-height: 3em;
-        min-width: 520px;
-        margin: 0 auto 2em auto;
+        min-width: 575px;
+        margin: 0 auto;
     }
 
     .zoom-in-zoom-out img {
@@ -476,23 +479,19 @@ a:hover {
     }
 
     .seats-group {
-        width: 520px;
+        width: 575px;
         position: relative;
         transform: none;
-        top: auto;
-        left: -20px;
-        margin: auto;
-        justify-content: center;
+        top: 4em;
+        left: -2em;
+        right: -2em;
+        /* left: 0; */
     }
 
     .seat {
         height: 30px;
         width: 30px;
         background-repeat: no-repeat;
-    }
-
-    .row {
-        margin: auto;
     }
 
     .btn-user-guide {
@@ -506,15 +505,10 @@ a:hover {
     }
 
     .btn-confirm a {
-        width: 100px;
+        max-width: 150px;
         position: fixed;
         bottom: 10px;
         right: 0;
         z-index: 1;
     }
-
-    /* .fixed-btns {
-        background-color: #888888;
-        height: 3em;
-    } */
 }
