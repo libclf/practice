@@ -1,6 +1,6 @@
 :root {
-    --main-color: #77A88D;
-    --main-color-hover: #77A88D;
+    --main-color: #3b7555;
+    --main-color-hover: #3b7555;
     --main-font-size: 15px;
     --common-border: 1px #ddd solid;
 }
@@ -108,17 +108,17 @@ td {
 
 ul.nav li a,
 ul.nav li a:visited {
-    color: #77A88D;
+    color: var(--main-color);
 }
 
 ul.nav li a:hover,
 ul.nav li a:active {
-    color: #77A88D;
+    color: var(--function-color-hover);
     background-color: #FAFAFA;
 }
 
 ul.nav li.active a {
-    color: #77A88D;
+    color: var(--main-color-hover);
 }
 
 /* change bootstrap nav color end */
@@ -177,7 +177,7 @@ ul.nav li.active a {
 }
 
 .event-title a {
-    color: #77A88D;
+    color: var(--main-color);
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
@@ -248,4 +248,65 @@ ul.nav li.active a {
 .order-btns .btn-cancel-order a::before {
     content: url(./imgs/circle-xmark-solid.svg);
     padding-right: 10px;
+}
+
+@media screen and (max-width: 769px) {
+    td {
+        width: 90%;
+    }
+
+    .width {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .wrap {
+        width: 100%;
+        min-width: 100%;
+        margin: 25px 10px;
+    }
+
+    .nav-tabs {
+        padding-bottom: 10px;
+    }
+
+    .nav-tabs .nav-link {
+        background-color: none;
+        border: 1px solid transparent;
+        border-radius: 5rem;
+        margin: 5px;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #fff;
+        background-color: var(--main-color);
+        border: 1px solid #3b7555;
+        border-radius: 5rem;
+    }
+
+    .orders-list-title {
+        display: none;
+    }
+
+    .order-detail {
+        display: block;
+    }
+
+    .order-id {
+        font-size: 24px;
+    }
+
+    .event-pic img {
+        display: none;
+    }
+
+    .order-event-detail {
+        margin-bottom: 20px;
+    }
+
+    .order-btns,
+    .order-btns a {
+        width: 90%;
+        margin: auto 10px;
+    }
 }
