@@ -397,14 +397,26 @@ a:hover {
 
 .seat:hover {
     background: url(./imgs/hover_armchair_icon.svg);
+    cursor: pointer;
 }
 
 .selected-seat {
+    display: inline-block;
     background: url(./imgs/selected_armchair_icon.svg);
+    height: 30px;
+    width: 30px;
 }
 
 .occupied-seat {
+    display: inline-block;
     background: url(./imgs/occupied_armchair_icon.svg);
+    height: 30px;
+    width: 30px;
+}
+
+.disabled {
+    pointer-events: none;
+    background: local;
 }
 
 .modal-body ol {
