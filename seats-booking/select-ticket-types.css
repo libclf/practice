@@ -1,0 +1,517 @@
+:root {
+    --main-color: #3b7555;
+    --main-color-hover: #3b7555;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+    --function-color-hover: #518f6d;
+    --button-clicked-color: #1d5545;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: var(--main-font-size);
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+}
+
+.width {
+    width: 75%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* start ----- header-nav ----- */
+#header-nav {
+    background-color: var(--main-color);
+}
+
+#header-nav a {
+    color: #fff;
+    padding: 13px 20px;
+}
+
+#header-nav a:hover {
+    background-color: var(--main-color-hover);
+}
+
+#header-nav #header-nav-logo {
+    padding: 0px 20px;
+}
+
+#header-nav #header-nav-logo:hover {
+    background-color: transparent;
+}
+
+#header-nav img {
+    height: 20px;
+}
+
+#header-nav-search-div {
+    background-color: #fff;
+}
+
+#header-nav-magnifier-icon {
+    padding: 0px 5px 0px 10px;
+}
+
+#header-nav-search-input {
+    border: none;
+    width: 200px;
+    height: 40px;
+    transition: .3s ease;
+}
+
+#header-nav-search-input:focus {
+    outline: none;
+    width: 220px;
+}
+
+/* end ----- header-nav ----- */
+
+/* start ---- event img */
+.event-img {
+    background-color: #EEEEEE;
+    padding: 10px;
+    border-bottom: var(--common-border);
+}
+
+.event-img img {
+    display: block;
+    margin: auto;
+    max-width: 1200px;
+    max-height: auto;
+}
+
+/* end ---- event img */
+
+/* start ---- event name & event-detail ---- */
+h2 {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px 0px;
+}
+
+.event-detail tr {
+    line-height: 2em;
+}
+
+.event-detail th {
+    width: 95px;
+    color: #999999;
+    font-weight: bold;
+}
+
+.event-detail td {
+    color: #333333;
+}
+
+.event-detail table a {
+    color: var(--main-color);
+}
+
+#add-to-calendar,
+#view-the-map {
+    display: inline-block;
+}
+
+#add-to-calendar::before {
+    content: url(./imgs/calendar-alt-solid.svg);
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin: 0 5px 0 15px;
+}
+
+#view-the-map::before {
+    content: url(./imgs/map-marker-alt-solid.svg);
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin: 0 5px 0 15px;
+}
+
+/* end ---- event name & event-detail ---- */
+
+/* start ----purchase steps---- */
+.progress_container {
+    margin: 20px auto 0 auto;
+}
+
+.step_progress_bar {
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    position: relative;
+    border: 3px solid rgb(218, 218, 218);
+}
+
+p.step_text {
+    margin: 10px 0;
+    color: var(--main-color);
+    line-height: 2;
+    width: 150px;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 8px;
+}
+
+.number {
+    margin-left: 10px;
+    border-radius: 100%;
+    line-height: 2;
+    width: 30px;
+    border: 1px solid var(--function-color-hover);
+    background-color: white;
+    color: var(--button-clicked-color);
+    display: inline-block;
+    transition: background-color 500ms;
+}
+
+.step.progressing {
+    color: var(--main-color);
+    background-color: var(--main-color);
+    border: 3px solid var(--button-clicked-color);
+}
+
+.step.progressing p {
+    color: white;
+    font-weight: bold;
+}
+
+.step.progressing span {
+    color: var(--function-color-hover);
+}
+
+.step.progressing::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 67%;
+    background-color: rgb(184, 179, 179);
+    left: 100%;
+    bottom: 43%;
+    z-index: -1;
+}
+
+.step.display::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 67%;
+    background-color: #dadada;
+    left: 100%;
+    bottom: 43%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.display {
+    color: #FBFBFB;
+    border: 3px solid hsl(162, 17%, 50%);
+    background-color: hsl(148, 17%, 60%);
+}
+
+.display .number {
+    color: var(--function-color-hover);
+}
+
+.display p {
+    color: white;
+    font-weight: normal;
+}
+
+/* end ----purchase steps---- */
+
+/* start ---- seats area chart img */
+.seats-areas-chart img {
+    display: block;
+    max-width: 1200px;
+    max-height: auto;
+    padding: 15px;
+    margin: 15px auto;
+}
+
+/* end ---- seats area chart img */
+
+/* start ---- ticket-price */
+.ticket-price-table {
+    margin-bottom: 30px;
+}
+
+.ticket-price-title {
+    display: flex;
+    border-bottom: 2px solid #333333;
+    padding: 5px;
+}
+
+.ticket-price-title .ticket-type {
+    width: 40%;
+}
+
+.ticket-price-title .seats-select-type {
+    width: 20%;
+}
+
+.ticket-price-title .the-price {
+    width: 15%;
+    text-align: right;
+}
+
+.ticket-data-row {
+    display: flex;
+    align-items: center;
+    height: 4em;
+    line-height: 1em;
+    margin-top: 10px;
+    border: var(--common-border);
+    border-left: 3px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.area {
+    flex-direction: column;
+    width: 40%;
+    vertical-align: middle;
+}
+
+.area span {
+    display: block;
+    width: 90%;
+    font-size: 13px;
+    color: #999999;
+    margin-top: 5px;
+}
+
+.select-type {
+    width: 20%;
+}
+
+.ticket-price {
+    width: 15%;
+    text-align: right;
+}
+
+.amount {
+    width: 24%;
+    text-align: right;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+#input-ticket-amount {
+    width: 60px;
+    height: 2em;
+    text-align: center;
+    padding-inline-start: 0px;
+    border: 1px solid #999999;
+}
+
+#btn-minus,
+#btn-plus {
+    width: 2em;
+    height: 2em;
+    margin-inline: -6px;
+    padding-inline: 0 0px;
+    background: #FFF;
+    line-height: normal;
+    border: 1px solid #999999;
+    font-weight: bold;
+}
+
+#btn-minus {
+    opacity: 0.5;
+}
+
+/* hide input number arrows Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* hide input number arrows Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* align input number */
+input[type=button] {
+    -webkit-appearance: auto;
+}
+
+/* end ---- ticket-price */
+
+/* start ---- agreement */
+.agreement {
+    margin-bottom: 15px;
+}
+
+.agreement a {
+    color: var(--main-color);
+}
+
+/* end ---- agreement */
+
+/* start ---- btn-next-step */
+.btn-next-step {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.btn-next-step a {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: #fff;
+    height: 2.5em;
+    line-height: 1em;
+    width: 220px;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width:900px) {
+    .width {
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    .event-img img {
+        max-width: 100%;
+    }
+
+    /* start -------progress bar--------- */
+    .progress_container {
+        width: 95%;
+        margin: 0 10px;
+        padding: 20px 0;
+    }
+
+    .step_progress_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    .step {
+        color: var(--button-clicked-color);
+        border: none;
+        padding: 10px 0px;
+        border-radius: 0px;
+    }
+
+    .step:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .step:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+    p.step_text {
+        margin-top: 15px;
+        line-height: 0;
+        text-align: left;
+        padding-left: 8px;
+        font-weight: normal;
+    }
+
+    .number {
+        margin-left: 10px;
+        border-radius: 100%;
+        border: 1px solid var(--button-clicked-color);
+        background-color: white;
+        color: var(--button-clicked-color);
+    }
+
+    .step.progressing p {
+        font-weight: bold;
+    }
+
+    .step.progressing {
+        border: none;
+    }
+
+    .step.progressing::after {
+        display: none;
+    }
+
+    .step.display::after {
+        display: none;
+    }
+
+    /* end -------progress bar--------- */
+
+    .seats-areas-chart img {
+        max-width: 100%;
+    }
+
+    .ticket-price-title {
+        display: none;
+    }
+
+    .ticket-data-row {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 12em;
+        margin: auto 5px;
+        align-items: normal;
+        justify-content: center;
+    }
+
+    .area {
+        width: 65%;
+        height: 3.5em;
+    }
+
+    .select-type {
+        width: 40%;
+        line-height: 3em;
+        height: 3em;
+        text-align: left;
+    }
+
+    .ticket-price {
+        width: 40%;
+        line-height: 3em;
+        height: 3em;
+        text-align: left;
+    }
+
+    .amount {
+        width: 50%;
+        line-height: 3em;
+        height: 3em;
+        text-align: left;
+    }
+
+    .agreement {
+        line-height: 2em;
+        margin: 30px 10px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    #input-ticket-amount {
+        width: 50px;
+    }
+}

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NOT SUPER JUNIOR-L.S.S. THE SHOW : TH3EE GUYS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+    <link rel="stylesheet" href="select-ticket-types.css">
+</head>
+
+<body>
+    <!-- header-nav -->
+    <nav id="header-nav" class="d-flex">
+        <div class="width d-flex justify-content-between">
+            <div id="header-nav-left" class="d-flex align-items-center">
+                <a href="" id="header-nav-logo"><img src="./imgs/nav_logo.png" alt=""></a>
+                <a href="">探索活動</a>
+                <div id="header-nav-search-div" class="d-flex align-items-center">
+                    <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
+                    <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
+                </div>
+            </div>
+            <div id="header-nav-right" class="d-flex align-items-center">
+                <a href="">註冊</a>
+                <a href="">登入</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="event-img"><img src="https://picsum.photos/1300/600/?random=10"></div>
+    <div class="width">
+        <div class="event-name">
+            <h2>NOT SUPER JUNIOR-L.S.S. THE SHOW : TH3EE GUYS</h2>
+        </div>
+        <div class="event-detail">
+            <table>
+                <tr>
+                    <th>開始時間</th>
+                    <td>2124/02/17 18:00 (+0800)<a id="add-to-calendar" href="" alt="">加入行事曆</a></td>
+                </tr>
+                <tr>
+                    <th>活動地點</th>
+                    <td>亞洲國際博覽館 10號展館 / 國際機場亞洲國際博覽館 <a id="view-the-map" href="">檢視地圖</a></td>
+                </tr>
+                <tr>
+                    <th>主辦單位</th>
+                    <td>SHOWNEST</td>
+                </tr>
+                <tr>
+                    <th>票劵類型</th>
+                    <td>電子票券</td>
+                </tr>
+                <tr>
+                    <th>付款方式</th>
+                    <td>信用卡</td>
+                </tr>
+                <tr>
+                    <th>客戶服務</th>
+                    <td>請聯絡 <a href="mailto:support@shownest.com">SHOWNEST</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="progress_container">
+            <div class="step_progress_bar" id="step_progress_bar">
+                <span class="step display">
+                    <span class="number ">1</span>
+                    <p class="step_text">選擇票種</p>
+                </span>
+                <span class="step display">
+                    <span class="number ">2</span>
+                    <p class="step_text">劃位</p>
+                </span>
+                <span class="step progressing">
+                    <span class="number">3</span>
+                    <p class="step_text">填寫表單</p>
+                </span>
+                <span class="step">
+                    <span class="number">4</span>
+                    <p class="step_text">取票繳費</p>
+                </span>
+            </div>
+        </div>
+        <div class="seats-areas-chart"><img src="https://picsum.photos/580/580/?random=10"></div>
+        <div class="ticket-price-table">
+            <div class="ticket-price-title">
+                <div class="ticket-type">
+                    <p>票種</p>
+                </div>
+                <div class="seats-select-type">
+                    <p>座位</p>
+                </div>
+                <div class="the-price">
+                    <p>票價</p>
+                </div>
+            </div>
+            <div class="ticket-data-row">
+                <div class="area">
+                    全票
+                    <span>B1特一, B1特二</span>
+                </div>
+                <div class="select-type">自行選位</div>
+                <div class="ticket-price">TWD$3,000</div>
+                <div class="amount">
+                    <input id="btn-minus" type="button" value="-">
+                    <input type="number" name="ticket-amount" id="input-ticket-amount" placeholder="0">
+                    <input id="btn-plus" type="button" value="+">
+                </div>
+            </div>
+            <div class="ticket-data-row">
+                <div class="area">
+                    全票
+                    <span>紫1D, 紫1B, 黃2C, 紫1A, 紫1C, 紅1A, 紅1B, 紅1C, 紅1D</span>
+                </div>
+                <div class="select-type">自行選位</div>
+                <div class="ticket-price">TWD$2,600</div>
+                <div class="amount">
+                    <input id="btn-minus" type="button" value="-">
+                    <input type="number" name="ticket-amount" id="input-ticket-amount" placeholder="0">
+                    <input id="btn-plus" type="button" value="+">
+                </div>
+
+            </div>
+            <div class="ticket-data-row">
+                <div class="area">
+                    全票
+                    <span>紫2C, 紅2B, 紫1E, 紅2D, 紅2C, 紫2B, 紫2D, 黃2B, 紅1E, 黃2D</span>
+                </div>
+                <div class="select-type">自行選位</div>
+                <div class="ticket-price">TWD$2,400</div>
+                <div class="amount">
+                    <input id="btn-minus" type="button" value="-">
+                    <input type="number" name="ticket-amount" id="input-ticket-amount" placeholder="0">
+                    <input id="btn-plus" type="button" value="+">
+                </div>
+            </div>
+            <div class="ticket-data-row">
+                <div class="area">
+                    全票
+                    <span>紫2C, 紅2B, 紅2D, 紅2C, 紫2B, 紫2D, 紫2E, 紅2E, 黃2A, 黃2E</span>
+                </div>
+                <div class="select-type">自行選位</div>
+                <div class="ticket-price">TWD$3,200</div>
+                <div class="amount">
+                    <input id="btn-minus" type="button" value="-">
+                    <input type="number" name="ticket-amount" id="input-ticket-amount" placeholder="0">
+                    <input id="btn-plus" type="button" value="+">
+                </div>
+            </div>
+        </div>
+
+        <div class="agreement">
+            <input type="checkbox" name="service-and-privacy-agreement" id="">
+            我已經閱讀並同意<a href="http://"> 服務條款 </a>與<a href="http://"> 隱私權政策 </a>
+        </div>
+        <div class="btn-next-step">
+            <a href="http://">下一步</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
