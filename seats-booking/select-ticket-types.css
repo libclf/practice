@@ -72,16 +72,23 @@ a {
 /* end ----- header-nav ----- */
 
 /* start ---- event img */
-.event-img {
+.event-img-bgc {
     background-color: #EEEEEE;
-    padding: 10px;
     border-bottom: var(--common-border);
+}
+
+.event-img {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+
+
 }
 
 .event-img img {
     display: block;
-    margin: auto;
-    max-width: 1200px;
+
+    width: 100%;
     max-height: auto;
 }
 
