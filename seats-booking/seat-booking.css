@@ -107,7 +107,8 @@ a:hover {
     background-color: #EEE;
     padding: 0.5em 0;
     margin: 0 auto;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
 }
 
 /* cancel & user guide button */
@@ -162,7 +163,7 @@ a:hover {
     color: #fff;
     height: 2.5em;
     line-height: 2.5em;
-    width: 50%;
+    width: 100%;
     min-width: 200px;
     border-radius: 4px;
     margin: auto;
@@ -328,8 +329,8 @@ a:hover {
     text-align: center;
     color: #FFFFFF;
     position: relative;
-    top: 2px;
-    left: 1em;
+    top: 3px;
+    left: 0;
     z-index: 1;
 }
 
@@ -338,13 +339,14 @@ a:hover {
     content: '';
     position: absolute;
     top: 0;
-    right: 2em;
+    right: 3em;
     bottom: 0;
-    left: 1em;
+    left: 3em;
     background-color: #333333;
     z-index: -1;
-    transform: perspective(0.5em) rotateX(-0.5deg);
+    transform: perspective(0.5em) rotateX(-0.4deg);
     border-radius: .5rem;
+    margin-bottom: -10px;
 }
 
 
@@ -419,6 +421,10 @@ a:hover {
     background: local;
 }
 
+.rwd-fixed-btns {
+    display: none;
+}
+
 .modal-body ol {
     list-style: disc;
 }
@@ -446,18 +452,51 @@ a:hover {
         min-width: 100%;
     }
 
+    .action-bar {
+        display: inline-block;
+        padding: 0;
+    }
+
     .count-down-timer {
         width: 100%;
     }
 
-    .action-bar {
-        padding: 0;
+    .action-bar-left {
+        display: none;
     }
 
-    .action-bar-left {
-        position: fixed;
-        bottom: 4em;
-        z-index: 1;
+    .action-bar-left .btn-cancel {
+        display: none;
+    }
+
+    .action-bar .btn-confirm {
+        display: none;
+    }
+
+    .rwd-fixed-btns .btn-cancel a {
+        display: inline-block;
+        color: #333333;
+        height: 2.5em;
+        line-height: 1em;
+        width: 100px;
+        border: var(--common-border);
+        border-radius: 4px;
+        padding: 10px 5px;
+        text-align: center;
+        vertical-align: text-top;
+        margin: 0 10px;
+    }
+
+    .rwd-fixed-btns .btn-cancel a::before {
+        content: url(./imgs/circle-xmark-solid.svg);
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        padding-right: 10px;
+    }
+
+    .rwd-fixed-btns .btn-cancel a:hover {
+        background-color: #ddd;
     }
 
     .display-seat-area {
@@ -476,8 +515,8 @@ a:hover {
 
     .select-seats {
         overflow-x: auto;
-        overflow-y: auto;
-        height: 1000px;
+        overflow-y: clip;
+        height: 900px;
         padding-bottom: 5em;
     }
 
@@ -510,17 +549,14 @@ a:hover {
         display: none;
     }
 
-    .btn-cancel {
+    .rwd-fixed-btns {
         position: fixed;
-        bottom: 10px;
-        left: 0;
-    }
-
-    .btn-confirm a {
-        max-width: 150px;
-        position: fixed;
-        bottom: 10px;
-        right: 0;
-        z-index: 1;
+        bottom: 0;
+        background-color: #eee;
+        width: 100%;
+        height: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 }
