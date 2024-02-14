@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     font-size: var(--main-font-size);
     color: #333333;
 }
@@ -26,6 +26,7 @@ h6 {
     min-width: auto;
     max-width: 1200px;
     margin: 0px auto;
+    position: relative;
 }
 
 /* start ----- header-nav ----- */
@@ -168,7 +169,6 @@ a:hover {
     border-radius: 4px;
     margin: auto;
     text-align: center;
-
 }
 
 /* confirm button */
@@ -208,6 +208,103 @@ a:hover {
     border-radius: 4px;
 }
 
+/* start ---- btn-confirm clicked ---- */
+.confirm-wrap {
+    position: absolute;
+    top: -5px;
+    left: 78.333334%;
+    right: -10px;
+    width: 250px;
+    height: 640px;
+    background-color: #FFFFFF;
+    z-index: 2;
+    border: var(--common-border);
+    border-radius: 4px;
+}
+
+.confirm-wrap: {
+    display: "";
+}
+
+.display-total-amount .total-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.display-total-amount .total-amount span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    color: #888888;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.display-total-amount .total-amount p {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.seats-selection-complete {
+    margin-bottom: 20px;
+}
+
+.seats-selection-complete a {
+    display: block;
+    background-color: var(--main-color);
+    color: #fff;
+    height: 3em;
+    line-height: 1.5em;
+    width: 220px;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seats-selection-complete a:hover {
+    background-color: var(--function-color-hover);
+}
+
+.selected-tickets {
+    border-top: var(--common-border);
+    border-bottom: var(--common-border);
+    background-color: #e5e5e5;
+    padding: 10px;
+    margin: auto;
+}
+
+.ticket-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ticket-detail .price {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    background-color: var(--main-color);
+    padding: 20px 10px;
+    margin-left: -1px;
+}
+
+.ticket-with-seat-detail {
+    margin-right: 5px;
+}
+
+.ticket-with-seat-detail .ticket-type {
+    /* display: inline-block; */
+    color: #888888;
+    text-align: right;
+}
+
+
+/* end ---- btn-confirm clicked---- */
 /* seat areas btns and showcase */
 .seat-areas-and-showcases {
     background-color: #ddd;
@@ -440,7 +537,28 @@ a:hover {
     --bs-btn-border-color: var(--main-color);
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 1600px) {
+    .confirm-wrap {
+        transform: translateX(-10%);
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .confirm-wrap {
+        transform: translateX(-12%);
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .confirm-wrap {
+        transform: translateX(-38%);
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .btn-confirm a {
         width: 150px;
     }
@@ -471,6 +589,48 @@ a:hover {
 
     .action-bar .btn-confirm {
         display: none;
+    }
+
+    .confirm-wrap {
+        display: none;
+    }
+
+    .modal-header .selected-tickets {
+        display: inline-block;
+        color: var(--main-color);
+        border: none;
+        background-color: transparent;
+        margin-left: 0;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .modal-body .ticket-detail {
+        justify-content: space-evenly;
+    }
+
+    .modal-footer .total-amount {
+        margin-right: 80px;
+    }
+
+    .modal-footer .total-amount span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 13px;
+        color: #888888;
+        font-weight: normal;
+        margin: 10px 0;
+    }
+
+    .modal-footer .total-amount p {
+        display: inline-block;
+        font-size: 26px;
+        font-weight: 900;
+        margin: 10px 0;
+    }
+
+    .modal-footer .seats-selection-complete {
+        margin: auto;
     }
 
     .rwd-fixed-btns .btn-cancel a {
