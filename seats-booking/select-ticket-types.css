@@ -208,7 +208,7 @@ p.step_text {
     position: absolute;
     height: 6px;
     width: 67%;
-    background-color: rgb(184, 179, 179);
+    background-color: #b8b3b3;
     left: 100%;
     bottom: 43%;
     z-index: -1;
@@ -219,7 +219,7 @@ p.step_text {
     position: absolute;
     height: 6px;
     width: 67%;
-    background-color: #dadada;
+    background-color: #d9d9d9;
     left: 100%;
     bottom: 43%;
     z-index: -1;
@@ -227,9 +227,9 @@ p.step_text {
 }
 
 .display {
-    color: #FBFBFB;
-    border: 3px solid hsl(162, 17%, 50%);
-    background-color: hsl(148, 17%, 60%);
+    color: #fbfbfb;
+    border: 3px solid #6a9588;
+    background-color: #87ab98;
 }
 
 .display .number {
@@ -321,7 +321,7 @@ p.step_text {
 }
 
 #input-ticket-amount {
-    width: 60px;
+    width: 50px;
     height: 2em;
     text-align: center;
     padding-inline-start: 0px;
@@ -333,15 +333,26 @@ p.step_text {
     width: 2em;
     height: 2em;
     margin-inline: -6px;
-    padding-inline: 0 0px;
+    padding-inline: 0px 0px;
     background: #FFF;
-    line-height: normal;
     border: 1px solid #999999;
     font-weight: bold;
 }
 
 #btn-minus {
+    border-radius: 4px 0px 0px 4px;
     opacity: 0.5;
+}
+
+#btn-plus {
+    border-radius: 0px 4px 4px 0px;
+}
+
+input {
+    line-height: normal;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* hide input number arrows Chrome, Safari, Edge, Opera */
@@ -395,7 +406,7 @@ input[type=button] {
     vertical-align: middle;
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width:768px) {
     .width {
         width: 100%;
         margin: 0 10px;
@@ -505,20 +516,15 @@ input[type=button] {
     }
 
     .amount {
-        width: 50%;
+        width: 33%;
         line-height: 3em;
         height: 3em;
-        text-align: left;
+        margin-right: 5px;
+        text-align: right;
     }
 
     .agreement {
         line-height: 2em;
         margin: 30px 10px;
-    }
-}
-
-@media only screen and (max-width:320px) {
-    #input-ticket-amount {
-        width: 50px;
     }
 }
