@@ -146,7 +146,6 @@ h1 {
 
 .input-area {
     width: 650px;
-    min-width: 450px;
     background-color: #fff;
     border: var(--common-border);
     border-radius: 4px;
