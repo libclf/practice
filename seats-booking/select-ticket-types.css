@@ -11,7 +11,6 @@
     --common-border-radius: 5px;
 }
 
-
 h2 {
     text-align: left;
 }
@@ -181,12 +180,16 @@ p.step_text {
 /* end ----purchase steps---- */
 
 /* start ---- seats area chart img */
-.seats-areas-chart img {
+.seats-areas-chart {
     display: block;
     max-width: 1200px;
-    max-height: auto;
     padding: 15px;
     margin: 15px auto;
+}
+
+.seats-areas-chart img {
+    display: block;
+    width: 100%;
 }
 
 /* end ---- seats area chart img */
@@ -384,7 +387,7 @@ input[type=button] {
     /* start -------progress bar--------- */
     .progress_container {
         width: 95%;
-        margin: 0 10px;
+        margin: auto;
         padding: 20px 0;
     }
 
