@@ -144,6 +144,10 @@ h1 {
     background-color: var(--main-color);
 }
 
+.sign-up a {
+    color: #fff;
+}
+
 .input-area {
     width: 650px;
     background-color: #fff;
