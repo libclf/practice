@@ -121,12 +121,12 @@ h1 {
 }
 
 .log-in,
-.sign-up {
+.sign-up a {
+    display: block;
     padding: 13px 30px;
     border-top: var(--common-border);
     border-right: var(--common-border);
     border-left: var(--common-border);
-
     border-radius: 4px;
 }
 
@@ -136,7 +136,6 @@ h1 {
     border-bottom: 1px solid #fff;
     opacity: 0.9;
     margin-right: -1px;
-    /* padding-bottom: -5px; */
 }
 
 .sign-up {
