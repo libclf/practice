@@ -1,0 +1,136 @@
+:root {
+    --function-color-hover: #518f6d;
+}
+
+h2 {
+    text-align: left;
+    color: var(--main-green);
+    margin-bottom: 50px;
+}
+
+.events-tickets-list .header {
+    display: flex;
+    font-weight: bold;
+    border-bottom: var(--common-border);
+}
+
+.data-row {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.event-name {
+    width: 50%;
+    padding: 5px;
+}
+
+.event-start-time {
+    width: 30%;
+    padding: 5px;
+}
+
+.ticket-amount {
+    width: 20%;
+    text-align: right;
+    padding: 5px;
+}
+
+.action-btns {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: var(--common-border);
+}
+
+.action-btns a {
+    display: inline-block;
+    background-color: var(--main-green);
+    color: #fff;
+    height: 2.5em;
+    line-height: 1em;
+    width: 130px;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    text-align: center;
+    vertical-align: baseline;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.action-btns a:hover {
+    background-color: var(--function-color-hover);
+}
+
+.ticket-detail a::before {
+    content: url(./imgs/ticket-alt-solid.svg);
+    padding-right: 5px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.event-page a::before {
+    content: url(./imgs/external-link-alt-solid.svg);
+    padding-right: 5px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .width {
+        width: 90%;
+        margin: 0px auto;
+    }
+
+    .wrap {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .action-btns {
+        justify-content: center;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:769px) {
+
+    @media (min-width:769px) and (max-width:1200px) {
+        .width {
+            width: 90%;
+        }
+
+        .wrap {
+            width: 90%;
+            margin: 50px auto
+        }
+    }
+
+    @media (min-width:1201px) {
+        .width {
+            width: 75%;
+        }
+
+        .wrap {
+            width: 75%;
+            margin: 50px auto;
+        }
+    }
+
+    .width {
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+
+    .wrap {
+        max-width: 1200px;
+        margin: 50px auto;
+    }
+
+}
